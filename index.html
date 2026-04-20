@@ -19,25 +19,25 @@
         }
 
         body {
-    background-image: url('');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* This keeps the background still while you scroll */
-    background-repeat: no-repeat;
-    color: #fff; /* White text looks best on this dark tech background */
-}
+            background-color: #0f172a;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
 
-/* Add an overlay to make sure text is readable */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 23, 42, 0.7); /* Dark semi-transparent layer */
-    z-index: -1;
-}
+        /* Overlay for readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.85); 
+            z-index: -1;
+        }
 
         .container {
             max-width: 1100px;
@@ -50,14 +50,14 @@ body::before {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #2c3e50;
+            background: #1e293b;
             color: #fff;
             padding: 1rem 10%;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .nav-links {
@@ -81,7 +81,7 @@ body::before {
         /* Home Section */
         .home-hero {
             padding: 140px 0 80px 0;
-            background: linear-gradient(135deg, #f4f7f6 0%, #e9eeee 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             display: flex;
             align-items: center;
         }
@@ -95,29 +95,29 @@ body::before {
         }
 
         .profile-img {
-            width: 225px;
+            width: 230px;
             height: 230px;
             border-radius: 50%;
             object-fit: cover;
-            border: 6px solid #2C3E50;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border: 6px solid #1abc9c;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
 
         .hero-content h1 {
             font-size: 3rem;
-            color: #2C3E50;
+            color: #fff;
             margin-bottom: 0.5rem;
         }
 
         .hero-content p {
             font-size: 1.3rem;
-            color: #7f8c8d;
+            color: #94a3b8;
             margin-bottom: 2rem;
         }
 
-        .btn {
+        .btn, .cv-btn {
             display: inline-block;
-            background: #2C3E50;
+            background: #1abc9c;
             color: #fff;
             padding: 0.8rem 2rem;
             border-radius: 5px;
@@ -128,63 +128,10 @@ body::before {
             cursor: pointer;
         }
 
-        .btn:hover {
-            background: #1abc9c;
+        .btn:hover, .cv-btn:hover {
+            background: #16a085;
             transform: translateY(-3px);
         }
-        /* Toast Notification Styling */
-#toast {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px); /* Start off-screen */
-    background: #1abc9c; /* Theme color */
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 5000;
-    font-weight: bold;
-    opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0); /* Slide up into view */
-}
-
-/* Success Icon Animation */
-.toast-icon {
-    background: rgba(255,255,255,0.2);
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-}
-            /* CV BUTTON FIX */
-.cv-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 25px;
-    background-color: #2c3e50; /* Dark background */
-    color: #ffffff !important;   /* Force white text */
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.cv-btn:hover {
-    background-color: #1abc9c; /* Changes color when hovering */
-    color: #ffffff !important;
-}
 
         /* Section Styling */
         .section {
@@ -192,13 +139,13 @@ body::before {
         }
 
         .bg-light {
-            background-color: #f9f9f9;
+            background-color: rgba(255, 255, 255, 0.03);
         }
 
         .section-title {
             font-size: 2.2rem;
             margin-bottom: 2.5rem;
-            color: #2c3e50;
+            color: #1abc9c;
             text-align: left;
         }
 
@@ -207,37 +154,38 @@ body::before {
             display: block;
             width: 60px;
             height: 4px;
-            background: #2C3E50;
+            background: #1abc9c;
             margin-top: 8px;
         }
 
         /* Grid Layouts */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
-            border: 1px solid #eee;
-            color: #333;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
         }
 
         .card:hover {
             transform: translateY(-10px);
+            border-color: #1abc9c;
         }
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 5px;
+            border-radius: 8px;
             margin-bottom: 1rem;
         }
 
@@ -248,16 +196,20 @@ body::before {
 
         .output-list li {
             padding: 1rem;
-            background: #fff;
-            margin-bottom: 0.5rem;
+            background: #1e293b;
+            margin-bottom: 0.7rem;
             border-left: 5px solid #1abc9c;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            color: #333;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .output-list li:hover {
+            background: #2d3748;
         }
 
         .output-list li a {
             text-decoration: none;
-            color: #2C3E50;
+            color: #fff;
             font-weight: 500;
         }
 
@@ -269,16 +221,47 @@ body::before {
         }
 
         .contact-links a {
-            text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;
-            padding: 15px; border-radius: 8px; background: rgba(128,128,128,0.1); transition: 0.3s;
+            text-decoration: none; color: #fff; display: flex; align-items: center; gap: 10px;
+            padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05); transition: 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .contact-links a:hover {
+            background: #1abc9c;
         }
 
         .feedback-form input, .feedback-form textarea {
-            width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px;
+            width: 100%; padding: 1rem; margin-bottom: 1rem; 
+            border: 1px solid #334155; border-radius: 5px;
+            background: #0f172a; color: #fff;
         }
 
-        /* --- UI COMPONENTS (SCROLL & CHAT) --- */
+        /* Toast Notification */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1abc9c;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 5000;
+            font-weight: bold;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
+        #toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* UI COMPONENTS (SCROLL & CHAT) */
         #scrollTop {
             position: fixed;
             bottom: 30px;
@@ -292,36 +275,31 @@ body::before {
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            font-size: 1.2rem;
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s ease;
             z-index: 2001;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        #scrollTop.show {
-            opacity: 1;
-            visibility: visible;
-        }
+        #scrollTop.show { opacity: 1; visibility: visible; }
 
         .chatbot-toggler {
             position: fixed;
             bottom: 30px;
             right: 90px;
             height: 50px;
-            width: 75px;
+            width: 100px;
             color: #fff;
             border: none;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            background: #2c3e50;
+            background: #1abc9c;
             border-radius: 25px;
             z-index: 2000;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .chatbot {
@@ -329,16 +307,16 @@ body::before {
             right: 35px;
             bottom: 95px;
             width: 350px;
-            background: #fff;
+            background: #1e293b;
             border-radius: 15px;
-            box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
             overflow: hidden;
             transform: scale(0.5);
             opacity: 0;
             pointer-events: none;
-            transition: all 0.1s ease;
+            transition: all 0.2s ease;
             z-index: 2000;
-            color: #333;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .show-chatbot .chatbot {
@@ -347,23 +325,23 @@ body::before {
             pointer-events: auto;
         }
 
-        .chatbot header { background: #2c3e50; padding: 15px 0; text-align: center; color: #fff; }
-        .chatbot .chatbox { height: 300px; overflow-y: auto; padding: 15px 20px 70px; }
-        .chatbox .chat { display: flex; list-style: none; margin-bottom: 10px; }
+        .chatbot header { background: #1abc9c; padding: 15px; text-align: center; color: #fff; }
+        .chatbot .chatbox { height: 300px; overflow-y: auto; padding: 15px; }
+        .chatbox .chat { display: flex; list-style: none; margin-bottom: 15px; }
         .chatbox .incoming span { height: 32px; width: 32px; color: #fff; background: #1abc9c; text-align: center; line-height: 32px; border-radius: 4px; margin-right: 10px; }
-        .chatbox .chat p { max-width: 75%; font-size: 0.95rem; padding: 12px 16px; border-radius: 10px; }
-        .chatbox .outgoing p { background: #2c3e50; color: #fff; margin-left: auto; border-radius: 10px 10px 0 10px; }
-        .chatbox .incoming p { background: #f2f2f2; color: #333; border-radius: 10px 10px 10px 0; }
-        .chatbot .chat-input { position: absolute; bottom: 0; width: 100%; display: flex; background: #fff; padding: 5px 20px; border-top: 1px solid #ccc; }
-        .chat-input textarea { height: 40px; width: 100%; border: none; outline: none; resize: none; padding: 10px 0; }
+        .chatbox .chat p { max-width: 80%; font-size: 0.9rem; padding: 10px 14px; border-radius: 10px; line-height: 1.4; }
+        .chatbox .outgoing p { background: #1abc9c; color: #fff; margin-left: auto; border-radius: 10px 10px 0 10px; }
+        .chatbox .incoming p { background: #334155; color: #fff; border-radius: 10px 10px 10px 0; }
+        .chatbot .chat-input { display: flex; background: #0f172a; padding: 10px 15px; border-top: 1px solid #334155; }
+        .chat-input textarea { height: 40px; width: 100%; border: none; outline: none; resize: none; background: transparent; color: #fff; padding: 10px 0; }
 
-        footer { background: #2c3e50; color: #fff; text-align: center; padding: 3rem 0; }
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 3rem 0; border-top: 1px solid #1e293b; }
 
         @media (max-width: 768px) {
             .hero-container { flex-direction: column; text-align: center; }
             .nav-links { display: none; }
             .contact-grid { grid-template-columns: 1fr; }
-            .chatbot { width: 100%; right: 0; bottom: 0; border-radius: 0; }
+            .chatbot { width: 90%; right: 5%; left: 5%; bottom: 100px; }
         }
     </style>
 </head>
@@ -388,507 +366,105 @@ body::before {
             </div>
             <div class="hero-content">
                 <h1>Hi, I’m Elyzah Pearl Barcoma</h1>
-                <p>IT Student of CPSU Moises Padilla</p>
-               <a href="My CV .pdf" download class="cv-btn">Download CV</a>
+                <p>BSIT Student | Developer | Designer</p>
+               <a href="My CV .pdf" download class="cv-btn"><i class="fas fa-download"></i> Download CV</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="section">
-
         <div class="container">
-
             <h2 class="section-title">About Me</h2>
-
-            <p>I am an IT student at Central Philippine State University–Moises Padilla Campus with a passion for building functional, visually striking digital solutions. By combining technical expertise in C++, JavaScript, and PHP with a strong foundation in design.
-
-<br><br>
-
-Beyond development, I leverage tools like Figma, Adobe Photoshop, and Adobe Premiere Pro to bring creative ideas to life. Whether I am prototyping e-commerce interfaces or crafting multimedia content, I am dedicated to creating impactful, user-centric projects that merge functionality with artistic design.</p>
-
+            <p>I am a 2nd-year IT student at Central Philippine State University–Moises Padilla Campus. I specialize in building functional digital solutions by combining technical coding skills (C++, PHP, JS) with modern UI/UX design (Figma, Photoshop). I'm passionate about user-centric projects that balance aesthetics and performance.</p>
         </div>
-
     </section>
-
-
 
     <section id="skills" class="section bg-light">
-
         <div class="container">
-
             <h2 class="section-title">Skills</h2>
-
             <div class="grid">
-
-                <div class="card">
-
-                    <img src="Messenger_creation_0B42EA4A-94B1-4A97-8773-59A2C6870E1E.jpeg" alt="Adobe Photoshop" class="skill-img">
-
-                    <h3>Adobe Photoshop</h3>
-
-                    <p>Creative graphic editing and layout design.</p>
-
-                </div>
-
-
-
-                <div class="card">
-
-                    <img src="B_20250131_103635_0000.jpg" alt="Infographics" class="skill-img">
-
-                    <h3>Canva Infographic Design.</h3>
-
-                    <p>Clean and engaging visual storytelling about baby boomers.</p>
-
-                </div>
-
-
-
-                <div class="card">
-
-                    <img src="Messenger_creation_4AFA7003-9A0B-4737-B0F1-ABFD8269DF64.jpeg" alt="Figma" class="skill-img">
-
-                    <h3>Figma E-Commers UI DEsign,</h3>
-
-                    <p>User friendly and modern interface design.</p>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Messenger_creation_70105934-7B58-48DF-9AD3-C06AC439031B.jpeg" alt="Microsoft Excel" class="skill-img">
-
-                    <h3>Microsoft Excel Activity</h3>
-
-                    <p>Automated grading system using formulas and data.</p>
-
-                </div>
-
-                    <div class="card">
-
-                    <img src="Screenshot_20251028-203259_1.png" alt="Adobe Premiere" class="skill-img">
-
-                    <h3>Adobe Premiere Pro Project.</h3>
-
-                    <p>Video editing and production.</p>
-
-                </div>
-
-                    <div class="card">
-
-                    <img src="Screenshot_20260418-123059.png" alt="HTML" class="skill-img">
-
-                    <h3>Html Project</h3>
-
-                    <p>Structured and responsive web development.</p>
-
-                    </div>
-
-      
-
-                    <div class="card">
-
-                    <img src="Screenshot_20251028-212737.png" alt="Adobe Premiere" class="skill-img">
-
-                    <h3>JavaScript Activity</h3>
-
-                    <p>Interactive form handling and dynamic functionality.</p>
-
-                    </div>
-
-                  
-
-                    <div class="card">
-
-                    <img src="IMG_20251021_120112_050.jpg" alt="Adobe Premiere" class="skill-img">
-
-                    <h3>PHP to Database Activity</h3>
-
-                    <p>Seamless data processing and database integration.</p>
-
-                    </div>
-
-                    <div class="card">
-
-                    <img src="Screenshot_20260418-130953.png" alt="Adobe Premiere" class="skill-img">
-
-                    <h3>Business Simulation in Microsoft Excel</h3>
-
-                    <p>Experience with Canva, Figma, and visual storytelling.</p>
-
-                </div>
-
+                <div class="card"><h3>Adobe Photoshop</h3><p>Creative graphic editing and banner design.</p></div>
+                <div class="card"><h3>Figma & UI/UX</h3><p>Modern E-Commerce interface design.</p></div>
+                <div class="card"><h3>Web Dev</h3><p>Proficient in HTML, CSS, JavaScript, and PHP.</p></div>
+                <div class="card"><h3>Video Production</h3><p>Editing with Adobe Premiere Pro and CapCut.</p></div>
             </div>
-
         </div>
-
     </section>
 
-
     <section id="projects" class="section">
-
         <div class="container">
-
-            <h2 class="section-title">Projects</h2>
-
+            <h2 class="section-title">Key Projects</h2>
             <div class="grid">
-
-                <div class="card">
-
-                    <img src="Screenshot_20251027-181954_1.png" alt="T-shirt Layout">
-
-                    <h3>Banner</h3>
-
-                    <p>Designed a visually engaging banner using Adobe Photoshop, focusing on branding consistency and high-quality digital output.</p>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Screenshot_20251027-182131_1.png" alt="Handheld System">
-
-                    <h3>Product Design</h3>
-
-                    <p>Created a modern product design using Adobe Photoshop, emphasizing layout composition, visual appeal, and user-focused presentation.</p>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Screenshot_20251028-203259_1.png" alt="Handheld System">
-
-                    <h3>Shirt Layout</h3>
-
-                    <p>Developed a detailed shirt layout using Adobe Photoshop, integrating creative concepts with precise design and print-ready formatting.</p>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Screenshot_20251028-202831_1.png" alt="Handheld System">
-
-                    <h3>Chessboard Board </h3>
-
-                    <p>Designed a visually engaging banner using Adobe Photoshop, focusing on branding consistency and high-quality digital output.</p>
-
-                </div>
-
-                
-
-<div class="card">
-
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/PFIMz564rCI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                <h3>Short Film</h3>
-
-                <p>Crafted a compelling short film using Adobe Premiere Pro.</p>
-
+                <div class="card"><h3>Banner & Shirt Layout</h3><p>Digital branding using Photoshop.</p></div>
+                <div class="card"><h3>Multimedia</h3><p>Short films and Music Videos produced in Premiere Pro.</p></div>
+                <div class="card"><h3>Business Simulation</h3><p>Complex automated systems in MS Excel.</p></div>
             </div>
-
-
-
-            <div class="card">
-
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZZqQyKXNoyI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                <h3>Music Video</h3>
-
-                <p>Edited and directed a dynamic music video using Adobe Premiere Pro.</p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/mpVK1C_vDtE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                <h3>History of Igorot</h3>
-
-                <p>Developed an informative video on the History of Igorot using CapCut.</p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/1ZEQzd7pU08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                <h3>Privacy Awareness</h3>
-
-                <p>Produced an educational Privacy Awareness video focused on digital safety.</p>
-
-            </div>
-
-            </section>
-
-            <section id="outputs-tutorials" class="section">
-
-    <div class="container">
-
-        <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
-
-
-
-            <div style="flex: 2; min-width: 350px;">
-
-                <h2 class="section-title">Tutorials</h2>
-
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-
-                    <div class="card">
-
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/nNPFRDyugBw" frameborder="0" allowfullscreen></iframe>
-
-                        <h3>Canva Hack</h3>
-
-                    </div>
-
-                    <div class="card">
-
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/MYBz9mcxec8" frameborder="0" allowfullscreen></iframe>
-
-                        <h3>Photoshop Banner</h3>
-
-                    </div>
-
-                    <div class="card">
-
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/s5pmb6Nv-Us" frameborder="0" allowfullscreen></iframe>
-
-                        <h3>GitHub Hosting</h3>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div style="flex: 1; min-width: 300px;">
-
-                <h2 class="section-title">Outputs</h2>
-
-                <ul class="output-list">
-
-                    <li>
-
-                        <i class="fas fa-check-circle"></i>
-
-                        <a href="https://www.canva.com/design/DAGuOrSlrYk/iIbQv0dtikl2nOm8zvCVdQ/edit" target="_blank">Handheld System Implementation</a>
-
-                    </li>
-
-                    <li>
-
-                        <i class="fas fa-check-circle"></i>
-
-                        <a href="https://www.canva.com/design/DAGyO5KQ8kM/1LnIzrZMvRFGZgrFQFQyTQ/edit" target="_blank">The Three New AI</a>
-
-                    </li>
-
-                    <li>
-
-                        <i class="fas fa-check-circle"></i>
-
-                        <a href="https://www.canva.com/design/DAGvkkupgCw/Xbqb14surP8uVKVB1-yKAw/edit" target="_blank">Common Problems of OS</a>
-
-                    </li>
-
-                    <li>
-
-                        <i class="fas fa-check-circle"></i>
-
-                        <a href="https://www.figma.com/proto/24Iir7s3JTOxc0ycbqySKN/Food-website" target="_blank">Figma E-Commerce</a>
-
-                    </li>
-
-                </ul>
-
-            </div>
-
         </div>
-
-    </div>
-
-</section>
-
-
-
-    <section id="certificates" class="section bg-light">
-
-        <div class="container">
-
-            <h2 class="section-title">Certificates</h2>
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <img src="IMG_20260319_164748_357.jpg" alt="Certificate">
-
-                    <h3>Integrative Foundation for Innovative Systemic Solution</h3>
-
-                    <p>Completed March 18, 2026</p>
-
-                </div>
-
-                    <div class="card">
-
-                    <img src="IMG_20260319_164847_598.jpg" alt="Certificate">
-
-                    <h3>CISCO Networking Fundamentals</h3>
-
-                    <p>Completed March 12, 2026</p>
-
-                    </div>
-                    
-                   <div class="card">
-
-                    <img src="IMG_20260319_164907_443.jpg" alt="Certificate">
-
-                    <h3>Training Workshop on the Creation and Utilization of Official Digital Store through Social Media Platforms and Mobile Application for Marketing</h3>
-
-                    <p>Completed August 02,2025</p>
-
-                </div>
-
-            
-                <div class="card">
-
-                    <img src="IMG_20260319_164935_680.jpg" alt="Certificate">
-
-                    <h3>IT Seminar</h3>
-
-                    <p>Completed March 05, 2026</p>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="Screenshot_20260218-224842.png" alt="Certificate">
-
-                    <h3>Digital Safety and Security Awareness</h3> <p></p>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </section>
 
     <section id="contact" class="section">
-
-    <div class="container">
-
-        <h2 class="section-title">Contacts</h2>
-
-        <div class="contact-grid">
-
-            <div class="contact-links">
-
-                <a href="https://www.facebook.com/share/1JBQmhyDvJ/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-
-                <a href="mailto:elyzahpearlbarcoma@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-
-                <a href="https://www.instagram.com/itsmeelyzah_pearll" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-
-                <a href="tel:+639510685045"><i class="fas fa-phone"></i> +63 951 068 5045</a>
-
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-links">
+                    <a href="mailto:elyzahpearlbarcoma@gmail.com"><i class="fas fa-envelope"></i> elyzahpearlbarcoma@gmail.com</a>
+                    <a href="tel:+639510685045"><i class="fas fa-phone"></i> +63 951 068 5045</a>
+                    <a href="https://www.facebook.com/share/1JBQmhyDvJ/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+                <form id="contactForm" class="feedback-form">
+                    <h3>Send Feedback</h3>
+                    <input type="text" placeholder="Your Name" required>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
             </div>
-
-            <form id="contactForm" class="feedback-form">
-
-                <h3>Send Feedback</h3>
-
-                <input type="text" placeholder="Your Name" required>
-
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-
-                <button type="submit" class="btn">Submit</button>
-
-            </form>
-
         </div>
+    </section>
 
+    <div id="toast">
+        <span class="toast-icon"><i class="fas fa-check"></i></span>
+        <span id="toast-message">Feedback sent successfully!</span>
     </div>
-
-</section>
-            <section>
-                 <div id="toast">
-    <span class="toast-icon"><i class="fas fa-check"></i></span>
-    <span id="toast-message">Feedback sent successfully!</span>
-</div>
-</section>
 
     <a href="#home" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
 
     <button class="chatbot-toggler">
-        <span>Chat</span>
+        <i class="fas fa-comments" style="margin-right: 8px;"></i> Chat
     </button>
 
     <div class="chatbot">
         <header><h3>EPB Assistant</h3></header>
         <ul class="chatbox">
-            <li class="chat incoming"><span class="fas fa-robot"></span><p>Hi Elyzah's guest! How can I help you today?</p></li>
+            <li class="chat incoming"><span class="fas fa-robot"></span><p>Hi! I'm Elyzah's virtual assistant. Ask me about her skills, projects, or how to contact her!</p></li>
         </ul>
         <div class="chat-input">
-            <textarea placeholder="Ask about Elyzah..." required></textarea>
-            <span id="send-btn" class="fas fa-paper-plane" style="line-height: 40px; cursor: pointer; color: #1abc9c;"></span>
+            <textarea placeholder="Ask me something..." required></textarea>
+            <span id="send-btn" class="fas fa-paper-plane" style="line-height: 40px; cursor: pointer; color: #1abc9c; margin-left: 10px;"></span>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Elyzah Pearl Barcoma | BSIT Student CPSU</p>
+        <p>© 2026 Elyzah Pearl Barcoma | BSIT Student CPSU Moises Padilla</p>
     </footer>
 
     <script>
         const chatbotToggler = document.querySelector(".chatbot-toggler");
         const chatInput = document.querySelector(".chat-input textarea");
-        const sendChatBtn = document.querySelector(".chat-input span");
+        const sendChatBtn = document.getElementById("send-btn");
         const chatbox = document.querySelector(".chatbox");
         const scrollTopBtn = document.getElementById('scrollTop');
 
-        // --- 1. AUTOMATIC UP (SCROLL) LOGIC ---
+        // Scroll Logic
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
+            if (window.scrollY > 300) { scrollTopBtn.classList.add('show'); } 
+            else { scrollTopBtn.classList.remove('show'); }
         });
 
-        // --- 2. DRAGGABLE LOGIC ---
-        let isDragging = false;
-        let startX, startY;
-
-        chatbotToggler.addEventListener("mousedown", (e) => {
-            isDragging = false;
-            startX = e.clientX - chatbotToggler.offsetLeft;
-            startY = e.clientY - chatbotToggler.offsetTop;
-            
-            const onMouseMove = (e) => {
-                isDragging = true;
-                chatbotToggler.style.left = (e.clientX - startX) + 'px';
-                chatbotToggler.style.top = (e.clientY - startY) + 'px';
-                chatbotToggler.style.right = 'auto';
-                chatbotToggler.style.bottom = 'auto';
-            };
-
-            document.addEventListener("mousemove", onMouseMove);
-            document.addEventListener("mouseup", () => {
-                document.removeEventListener("mousemove", onMouseMove);
-            }, { once: true });
+        // Chatbot Toggle
+        chatbotToggler.addEventListener("click", () => {
+            document.body.classList.toggle("show-chatbot");
         });
 
-        chatbotToggler.addEventListener("click", (e) => {
-            if (!isDragging) {
-                document.body.classList.toggle("show-chatbot");
-            }
-        });
-
-        // --- 3. CHATBOT LOGIC ---
         const createChatLi = (message, className) => {
             const chatLi = document.createElement("li");
             chatLi.classList.add("chat", className);
@@ -904,26 +480,28 @@ Beyond development, I leverage tools like Figma, Adobe Photoshop, and Adobe Prem
             chatInput.value = "";
 
             chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+            chatbox.scrollTo(0, chatbox.scrollHeight);
             
             setTimeout(() => {
-                let response = "I'm not sure, but Elyzah is an IT student skilled in development and design!";
+                let response = "I'm not sure about that, but Elyzah is a talented IT student! You can check her CV for more specific details.";
 
-                if (userMessage === "hi" || userMessage === "hello") {
-                    response = "Hello! Good day 😁";
-                } else if (userMassage.includes("age") ||  userMassage.includes("old")){
-                  response = "Elyzah is currently 20 years old.";
-                }else if (userMessage.includes("who") || userMessage.includes("about")) {
-                    response = "Elyzah Pearl L. Barcoma is a 2nd-year BSIT student at CPSU Moises Padilla. She focuses on innovative digital solutions.";
-                } else if (userMessage.includes("skill") || userMessage.includes("tech")) {
-                    response = "She is skilled in HTML, CSS, JavaScript, UI/UX Design in Figma, and video editing using Premiere Pro.";
-                } else if (userMessage.includes("honor") || userMessage.includes("Achievements")) {
-                    response = "She earned 'With Honors' with a GWA of 1.56 during her first year.";
+                // Improved Logic based on Portfolio Content
+                if (userMessage.includes("hi") || userMessage.includes("hello")) {
+                    response = "Hello! I hope you're having a great day. What would you like to know about Elyzah?";
+                } else if (userMessage.includes("who") || userMessage.includes("about")) {
+                    response = "Elyzah Pearl Barcoma is a 2nd-year BSIT student at CPSU Moises Padilla. She is a mix of a developer and a creative designer!";
+                } else if (userMessage.includes("skill") || userMessage.includes("know") || userMessage.includes("tech")) {
+                    response = "She is skilled in HTML, CSS, JavaScript, and PHP. On the creative side, she uses Figma, Photoshop, and Premiere Pro.";
                 } else if (userMessage.includes("project") || userMessage.includes("work")) {
-                    response = "Elyzah projects include Music Videos, Short Films, customized Birthday Tarpaulin designs, t-Shirt Design, and Product design. For more information just visit her CV.";
-                }else if (userMessage.includes("contact") || userMessage.includes("email")) {
-                    response = "Contact Elyzah at her email accaount elyzahpearlbarcoma@gmail.com or +63 951 068 5045.";
+                    response = "Her projects include E-Commerce UI designs, Music Videos, Short Films, and custom Shirt/Banner layouts. Check the 'Projects' section for more!";
+                } else if (userMessage.includes("contact") || userMessage.includes("email") || userMessage.includes("phone")) {
+                    response = "You can email her at elyzahpearlbarcoma@gmail.com or call her at +63 951 068 5045.";
                 } else if (userMessage.includes("cert") || userMessage.includes("train")) {
-                    response = "She is certified in CISCO Networking Fundamentals, Training Workshop on the Creation and Utilization of Official Digital Store through Social Media Platforms and Mobile Application for Marketing, IT Seminar, Digital Safety and Security Awareness in CISCO.";
+                    response = "She holds certificates in CISCO Networking, Digital Safety, and specialized workshops for Digital Marketing.";
+                } else if (userMessage.includes("honor") || userMessage.includes("grade")) {
+                    response = "Elyzah is a dedicated student! She earned 'With Honors' during her first year with a GWA of 1.56.";
+                } else if (userMessage.includes("age") || userMessage.includes("old")) {
+                    response = "Elyzah is currently 20 years old.";
                 }
 
                 chatbox.appendChild(createChatLi(response, "incoming"));
@@ -939,28 +517,14 @@ Beyond development, I leverage tools like Figma, Adobe Photoshop, and Adobe Prem
             }
         });
 
+        // Form Logic
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your feedback!');
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
             this.reset();
+            setTimeout(() => { toast.classList.remove('show'); }, 3500);
         });
-        // --- 3. FORM SUBMISSION WITH TOAST NOTIFICATION ---
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent page reload
-
-    const toast = document.getElementById('toast');
-    
-    // 1. Show the toast
-    toast.classList.add('show');
-
-    // 2. Reset the form
-    this.reset();
-
-    // 3. Hide the toast after 3.5 seconds
-    setTimeout(() => {
-        toast.classList.remove('show');
-    }, 3500);
-});
     </script>
 </body>
 </html>
